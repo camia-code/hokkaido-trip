@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北海道 9天8夜｜札幌 × 旭川 × 中富良野 自由行</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface-warm:#fdf9f4;--border:#e8e2d9;
+  --text-primary:#1a1714;--text-secondary:#5c5650;--text-muted:#9c9590;
+  --accent-snow:#4a7fa5;--accent-forest:#5a7a5c;--accent-warmth:#c4813a;
+  --highlight:#fff8ee;--highlight-border:#f0c87a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--text-primary);font-size:15px;line-height:1.7;}
+
+/* COVER */
+.cover{background:linear-gradient(160deg,#1a2d3d 0%,#2d5068 60%,#1e3a4c 100%);padding:52px 24px 44px;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;top:-40px;right:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(74,127,165,0.3) 0%,transparent 70%);}
+.cover-emoji{font-size:44px;margin-bottom:12px;display:block;}
+.cover-title{font-family:'Lora',serif;font-size:26px;font-weight:600;color:#f0ece4;line-height:1.3;margin-bottom:6px;}
+.cover-sub{font-size:13px;color:#a8c4d8;margin-bottom:20px;line-height:1.6;}
+.cover-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.cover-tag{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#d8eaf4;padding:3px 12px;border-radius:20px;font-size:12px;}
+
+/* CONTAINER */
+.container{max-width:680px;margin:0 auto;padding:0 16px 60px;}
+
+/* SECTION */
+.section{margin:28px 0;}
+.section-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border);}
+.section-icon{font-size:18px;}
+.section-title{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:600;color:var(--text-primary);}
+
+/* CALLOUT */
+.callout{background:var(--highlight);border-left:4px solid var(--highlight-border);border-radius:6px;padding:12px 16px;margin:14px 0;font-size:13px;color:var(--text-secondary);}
+.callout strong{color:var(--text-primary);}
+.callout ul{margin-left:16px;margin-top:6px;}
+.callout li{margin-bottom:3px;}
+
+/* INFO GRID */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;}
+.info-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;}
+.info-card-label{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:4px;}
+.info-card-value{font-size:13px;font-weight:500;color:var(--text-primary);line-height:1.4;}
+
+/* STAY CARD */
+.stay-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:10px 0;display:flex;align-items:flex-start;gap:12px;}
+.stay-icon{font-size:24px;flex-shrink:0;margin-top:2px;}
+.stay-dates{font-size:11px;color:var(--text-muted);margin-bottom:2px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;}
+.stay-name{font-weight:600;font-size:14px;color:var(--text-primary);margin-bottom:4px;}
+.stay-addr{font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.5;}
+.stay-map-btn{display:inline-flex;align-items:center;gap:5px;background:#e8f4fb;border:1px solid #b0d4ea;color:#2a5878;border-radius:10px;padding:5px 12px;font-size:12px;text-decoration:none;font-weight:500;}
+.stay-map-btn:hover{background:#c8e4f4;}
+
+/* DAY BLOCK */
+.day-block{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.day-header{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);}
+.day-num{font-family:'Lora',serif;font-size:20px;font-weight:600;color:var(--accent-snow);min-width:36px;}
+.day-title-wrap{flex:1;}
+.day-title{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:1px;}
+.day-subtitle{font-size:11px;color:var(--text-muted);}
+.day-badge{font-size:11px;padding:3px 9px;border-radius:10px;font-weight:500;white-space:nowrap;flex-shrink:0;}
+.badge-sapporo{background:#e8f0fb;color:#3a5fa0;}
+.badge-asahikawa{background:#e8f3eb;color:#3a6840;}
+.badge-biei{background:#edf5fb;color:#2a6080;}
+.badge-transit{background:#f3ede8;color:#7a5848;}
+
+/* ROUTE BAR */
+.route-bar{background:#f0f6fb;border-bottom:1px solid #d4e8f4;padding:8px 16px;display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:11px;color:#3a6080;}
+.route-bar-label{font-weight:700;margin-right:2px;white-space:nowrap;}
+.route-stop{display:inline-flex;align-items:center;background:white;border:1px solid #b0cfe0;border-radius:12px;padding:2px 9px;white-space:nowrap;text-decoration:none;color:#2a5878;font-size:11px;}
+.route-arrow{color:#8ab8d0;}
+.route-full-btn{display:inline-flex;align-items:center;gap:4px;background:var(--accent-snow);color:white;border:none;border-radius:12px;padding:3px 10px;font-size:11px;cursor:pointer;text-decoration:none;margin-left:auto;white-space:nowrap;font-family:inherit;}
+
+/* SCHEDULE ITEMS */
+.schedule-list{padding:0;}
+.schedule-item{padding:12px 16px;border-bottom:1px solid #f0ece6;display:flex;gap:12px;}
+.schedule-item:last-child{border-bottom:none;}
+.schedule-item.row-meal{background:#fffdf8;}
+.schedule-item.row-highlight{background:#f5faff;}
+.schedule-item.row-supermarket{background:#f5fbf5;}
+.s-time{font-family:'Lora',serif;font-size:12px;color:var(--text-muted);white-space:nowrap;min-width:44px;padding-top:2px;font-weight:600;}
+.s-body{flex:1;min-width:0;}
+.s-place{font-weight:600;font-size:14px;color:var(--text-primary);margin-bottom:3px;line-height:1.4;}
+.row-meal .s-place{color:var(--accent-warmth);}
+.row-highlight .s-place{color:var(--accent-snow);}
+.row-supermarket .s-place{color:var(--accent-forest);}
+.s-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:6px;}
+.s-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
+.transport-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.t-jr{background:#e3edf8;color:#2a5080;}
+.t-car{background:#e8f4e8;color:#2a6030;}
+.t-walk{background:#fce8e8;color:#803030;}
+.t-bus{background:#fdf0e0;color:#805020;}
+.t-subway{background:#f0e8f8;color:#503080;}
+.cost-tag{font-size:11px;color:var(--accent-warmth);font-weight:500;background:#fff3e0;padding:2px 8px;border-radius:10px;}
+.map-btn{display:inline-flex;align-items:center;gap:3px;background:#e8f4fb;border:1px solid #b0d4ea;color:#2a5878;border-radius:10px;padding:2px 9px;font-size:11px;text-decoration:none;font-weight:500;}
+.map-btn:hover{background:#c8e4f4;}
+.map-btn-route{background:#e8f5ec;border-color:#9ecfaa;color:#1e5a2a;}
+
+/* BUDGET */
+.budget-list{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:12px;}
+.budget-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--border);gap:12px;}
+.budget-row:last-child{border-bottom:none;font-weight:700;background:#f8f4ee;}
+.budget-label{font-size:13px;color:var(--text-secondary);flex:1;}
+.budget-amount{font-size:13px;color:var(--accent-warmth);font-weight:600;white-space:nowrap;}
+.budget-note{font-size:11px;color:var(--text-muted);text-align:right;flex:1;}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:14px;}
+@media(min-width:540px){.tips-grid{grid-template-columns:1fr 1fr;}}
+.tip-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;}
+.tip-title{font-weight:600;font-size:13px;margin-bottom:6px;}
+.tip-body{font-size:12px;color:var(--text-secondary);line-height:1.7;}
+.tip-body li{margin-left:14px;margin-bottom:2px;}
+
+.divider{border:none;border-top:1px solid var(--border);margin:24px 0;}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-emoji">&#10052;&#65039;</span>
+  <div class="cover-title">北海道 9天8夜 冬季自由行</div>
+  <div class="cover-sub">札幌 &#8594; 旭川 &#215; 中富良野 &#8594; 美瑛 &#8594; 旭岳 &#8594; 札幌</div>
+  <div class="cover-tags">
+    <span class="cover-tag">&#128101; 3人同行</span>
+    <span class="cover-tag">&#128197; 12/11&#8211;12/19</span>
+    <span class="cover-tag">&#128663; 租車 12/12&#8211;12/16</span>
+    <span class="cover-tag">&#10052; 冬季雪景</span>
+    <span class="cover-tag">&#9749; 文青咖啡</span>
+    <span class="cover-tag">&#128184; 小資風格</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- OVERVIEW -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">&#128203;</span><span class="section-title">行程總覽</span></div>
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-label">去程</div><div class="info-card-value">BR166<br>桃園 06:15&#8594;新千歲 11:00</div></div>
+    <div class="info-card"><div class="info-card-label">回程</div><div class="info-card-value">CI131<br>新千歲 14:40&#8594;桃園 18:15</div></div>
+    <div class="info-card"><div class="info-card-label">租車</div><div class="info-card-value">12/12 12:30 取車<br>12/16 13:30 還車</div></div>
+    <div class="info-card"><div class="info-card-label">住宿分段</div><div class="info-card-value">札幌2晚 &#8594; 中富良野4晚 &#8594; 札幌3晚</div></div>
+  </div>
+  <div class="callout">
+    <strong>&#128316; 行程邏輯</strong>
+    <ul>
+      <li>12/11&#8211;12/12：飛抵札幌，市區感受冬季燈飾</li>
+      <li>12/12&#8211;12/16：租車以中富良野為基地，放射狀探索旭岳、美瑛、旭川</li>
+      <li>12/16&#8211;12/19：還車後返回札幌悠閒收尾</li>
+      <li>&#11088; 旭岳纜車冬季開放，大人往返 &#165;2,800・09:00&#8211;15:40</li>
+      <li>&#11088; 白金青池點燈：12月 16:30&#8211;21:00</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAYS -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">&#127968;</span><span class="section-title">住宿資訊</span></div>
+
+  <div class="stay-card">
+    <div class="stay-icon">&#127961;</div>
+    <div>
+      <div class="stay-dates">12/11&#8211;12/12・札幌（2晚）</div>
+      <div class="stay-name">HOTEL LiVEMAX PREMIUM Sapporo-odorikouen</div>
+      <div class="stay-addr">大通公園步行5分 ｜ Agoda 預訂</div>
+      <a class="stay-map-btn" href="https://www.google.com/maps/place/HOTEL+LiVEMAX+PREMIUM+Sapporo-odorikouen/@43.0571727,141.3440699,17z" target="_blank">&#128205; 查看地圖</a>
+    </div>
+  </div>
+
+  <div class="stay-card">
+    <div class="stay-icon">&#127964;</div>
+    <div>
+      <div class="stay-dates">12/12&#8211;12/16・中富良野（4晚）</div>
+      <div class="stay-name">FIKA-komorebi｜やわらかな風景と和のぬくもりに包まれる宿</div>
+      <div class="stay-addr">無番地, Nakafurano, Sorachi District, Hokkaido 071-0732 ｜ Airbnb 預訂</div>
+      <a class="stay-map-btn" href="https://www.google.com/maps/search/?api=1&query=FIKA-komorebi%EF%BD%9C%E3%82%84%E3%82%8F%E3%82%89%E3%81%8B%E3%81%AA%E9%A2%A8%E6%99%AF%E3%81%A8%E5%92%8C%E3%81%AE%E3%81%AC%E3%81%8F%E3%82%82%E3%82%8A%E3%81%AB%E5%8C%85%E3%81%BE%E3%82%8C%E3%82%8B%E5%AE%BF%2C%20071-0732%2C%20Hokkaido%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Nakafurano%20Tanaka%20Nojo%2C%20%E7%84%A1%E7%95%AA%E5%9C%B0%2C%20Japan%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Hokkaido%2C%20071-0732%2C%20JP" target="_blank">&#128205; 查看地圖</a>
+    </div>
+  </div>
+
+  <div class="stay-card">
+    <div class="stay-icon">&#127961;</div>
+    <div>
+      <div class="stay-dates">12/16&#8211;12/19・札幌（3晚）</div>
+      <div class="stay-name">B5 / 美术馆区的舒适房间</div>
+      <div class="stay-addr">中央区北5条西17丁目4-12 アジュールコートN5 205, 札幌市 ｜ Airbnb 預訂</div>
+      <a class="stay-map-btn" href="https://www.google.com/maps/search/?api=1&query=43.06420135498047%2C141.32989501953125" target="_blank">&#128205; 查看地圖</a>
+    </div>
+  </div>
+</div>
+
+<!-- DAILY ITINERARY -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">&#9992;&#65039;</span><span class="section-title">每日行程</span></div>
+
+  <!-- ===== DAY 1 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D1</div>
+      <div class="day-title-wrap">
+        <div class="day-title">抵達札幌 · 大通散策</div>
+        <div class="day-subtitle">12月11日（四）</div>
+      </div>
+      <span class="day-badge badge-sapporo">&#127961; 札幌</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0742,141.6922" target="_blank">新千歲</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0572,141.3441" target="_blank">飯店</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0594,141.3522" target="_blank">大通公園</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0607,141.3556" target="_blank">電視塔</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0625,141.3587" target="_blank">二条市場</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.0742,141.6922/43.0572,141.3441/43.0594,141.3522/43.0625,141.3587" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="s-time">11:00</div>
+        <div class="s-body">
+          <div class="s-place">新千歲機場抵達</div>
+          <div class="s-desc">BR166 落地，過海關領行李</div>
+          <div class="s-meta"><a class="map-btn" href="https://maps.google.com/?q=43.0742,141.6922" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">12:00</div>
+        <div class="s-body">
+          <div class="s-place">機場 &#8594; 札幌站</div>
+          <div class="s-desc">JR 快速エアポート 約37分</div>
+          <div class="s-meta"><span class="transport-tag t-jr">JR</span><span class="cost-tag">&#165;1,230/人</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.0742,141.6922/43.0572,141.3441" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">13:00</div>
+        <div class="s-body">
+          <div class="s-place">飯店 Check-in</div>
+          <div class="s-desc">HOTEL LiVEMAX PREMIUM，大通公園步行5分，先寄放行李</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><a class="map-btn" href="https://www.google.com/maps/place/HOTEL+LiVEMAX+PREMIUM+Sapporo-odorikouen/@43.0571727,141.3440699,17z" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">13:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127836; 一幻拉麵</div>
+          <div class="s-desc">札幌知名蝦味噌拉麵，湯頭濃郁，建議早去排隊</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;1,200/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0542,141.3506" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">15:00</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 大通公園</div>
+          <div class="s-desc">冬季白色燈飾節（至12/25），慕尼黑聖誕市集氣氛，雪中漫步</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.0594,141.3522" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">16:00</div>
+        <div class="s-body">
+          <div class="s-place">&#9749; 狸小路</div>
+          <div class="s-desc">屋頂遮雪的商店街，找間在地咖啡廳坐坐</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;600/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0560,141.3520" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">17:30</div>
+        <div class="s-body">
+          <div class="s-place">札幌電視塔</div>
+          <div class="s-desc">入夜後眺望大通公園燈飾全景</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;800/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0607,141.3556" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">19:00</div>
+        <div class="s-body">
+          <div class="s-place">&#129408; 二条市場 海鮮丼</div>
+          <div class="s-desc">鮭魚卵、帝王蟹丼，旅程首頓豪華，大磯等餐廳</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;2,000&#8211;3,500/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0625,141.3587" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-supermarket">
+        <div class="s-time">21:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128722; コープさっぽろ 採買</div>
+          <div class="s-desc">採買隔日早餐食材（麵包、飲料、北海道乳製品）</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;500&#8211;800/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0600,141.3510" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 2 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D2</div>
+      <div class="day-title-wrap">
+        <div class="day-title">札幌市區 · 租車出發中富良野</div>
+        <div class="day-subtitle">12月12日（五）</div>
+      </div>
+      <span class="day-badge badge-transit">&#128663; 移動日</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0637,141.3474" target="_blank">紅磚廳舍</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0769,141.3417" target="_blank">北大</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0686,141.3507" target="_blank">取車</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/maps/search/?api=1&query=FIKA-komorebi%EF%BD%9C%E3%82%84%E3%82%8F%E3%82%89%E3%81%8B%E3%81%AA%E9%A2%A8%E6%99%AF%E3%81%A8%E5%92%8C%E3%81%AE%E3%81%AC%E3%81%8F%E3%82%82%E3%82%8A%E3%81%AB%E5%8C%85%E3%81%BE%E3%82%8C%E3%82%8B%E5%AE%BF%2C%20071-0732%2C%20Hokkaido%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Nakafurano%20Tanaka%20Nojo%2C%20%E7%84%A1%E7%95%AA%E5%9C%B0%2C%20Japan" target="_blank">FIKA民宿</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.0637,141.3474/43.0769,141.3417/43.0686,141.3507/43.4640,142.4597" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">09:00</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 紅磚廳舍</div>
+          <div class="s-desc">北海道廳舊本廳舍（赤れんが庁舎），2025年重開，雪中紅磚建築極美，免費入館</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.0637,141.3474" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">09:45</div>
+        <div class="s-body">
+          <div class="s-place">北海道大學</div>
+          <div class="s-desc">冬日雪覆校園，銀杏大道白雪景致，北方學術氛圍</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.0769,141.3417" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">10:45</div>
+        <div class="s-body">
+          <div class="s-place">&#9749; ヨシノリコーヒー</div>
+          <div class="s-desc">東川町起家的精品咖啡，文青必訪</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;600&#8211;800/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0690,141.3512" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">12:00</div>
+        <div class="s-body">
+          <div class="s-place">&#127843; 湯咖哩 Suage+</div>
+          <div class="s-desc">北海道旬野菜雞腿湯咖哩，暖胃暖身</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">&#165;1,200&#8211;1,600/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0634,141.3538" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">12:30</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 取車出發</div>
+          <div class="s-desc">Toyota / Nippon Rent-A-Car 取車，務必選 AWD/4WD 冬胎車型</div>
+          <div class="s-meta"><span class="cost-tag">約&#165;7,000&#8211;10,000/天</span><a class="map-btn" href="https://maps.google.com/?q=43.0680,141.3510" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">13:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 札幌 &#8594; 中富良野</div>
+          <div class="s-desc">道央自動車道，約2小時，途中可休息</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">高速費&#165;2,200＋油費</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.0686,141.3507/43.4640,142.4597" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-supermarket">
+        <div class="s-time">15:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128722; フクハラ中富良野店 超市採買</div>
+          <div class="s-desc">4晚食材：北海道豚肉、蔬菜、乳製品、海鮮、調味料。或 A-COOP 富良野店</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">&#165;5,000&#8211;7,000（共）</span><a class="map-btn" href="https://maps.google.com/?q=43.4598,142.4652" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">16:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127968; FIKA-komorebi 入住</div>
+          <div class="s-desc">中富良野民宿 Check-in，整理食材，欣賞雪地景致</div>
+          <div class="s-meta"><a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=FIKA-komorebi%EF%BD%9C%E3%82%84%E3%82%8F%E3%82%89%E3%81%8B%E3%81%AA%E9%A2%A8%E6%99%AF%E3%81%A8%E5%92%8C%E3%81%AE%E3%81%AC%E3%81%8F%E3%82%82%E3%82%8A%E3%81%AB%E5%8C%85%E3%81%BE%E3%82%8C%E3%82%8B%E5%AE%BF%2C%20071-0732%2C%20Hokkaido%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Nakafurano%20Tanaka%20Nojo%2C%20%E7%84%A1%E7%95%AA%E5%9C%B0%2C%20Japan%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Hokkaido%2C%20071-0732%2C%20JP" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">18:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127859; 民宿自炊</div>
+          <div class="s-desc">北海道豚肉鍋或奶油蛋包飯，溫馨的小資夜晚</div>
+          <div class="s-meta"><span class="cost-tag">食材含採買</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 3 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D3</div>
+      <div class="day-title-wrap">
+        <div class="day-title">旭岳纜車 · 雪山壯景 · 東川文青</div>
+        <div class="day-subtitle">12月13日（六）</div>
+      </div>
+      <span class="day-badge badge-asahikawa">&#9968; 旭岳</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://www.google.com/maps/search/?api=1&query=FIKA-komorebi%EF%BD%9C%E3%82%84%E3%82%8F%E3%82%89%E3%81%8B%E3%81%AA%E9%A2%A8%E6%99%AF%E3%81%A8%E5%92%8C%E3%81%AE%E3%81%AC%E3%81%8F%E3%82%82%E3%82%8A%E3%81%AB%E5%8C%85%E3%81%BE%E3%82%8C%E3%82%8B%E5%AE%BF%2C%20071-0732%2C%20Hokkaido%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Nakafurano%20Tanaka%20Nojo%2C%20%E7%84%A1%E7%95%AA%E5%9C%B0%2C%20Japan" target="_blank">民宿</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.6647,142.8533" target="_blank">旭岳纜車</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.6960,142.8428" target="_blank">東川町</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://www.google.com/maps/search/?api=1&query=FIKA-komorebi%EF%BD%9C%E3%82%84%E3%82%8F%E3%82%89%E3%81%8B%E3%81%AA%E9%A2%A8%E6%99%AF%E3%81%A8%E5%92%8C%E3%81%AE%E3%81%AC%E3%81%8F%E3%82%82%E3%82%8A%E3%81%AB%E5%8C%85%E3%81%BE%E3%82%8C%E3%82%8B%E5%AE%BF%2C%20071-0732%2C%20Hokkaido%2C%20Nakafurano%2C%20Sorachi%20District%2C%20Nakafurano%20Tanaka%20Nojo%2C%20%E7%84%A1%E7%95%AA%E5%9C%B0%2C%20Japan" target="_blank">民宿</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.4640,142.4597/43.6647,142.8533/43.6960,142.8428/43.4640,142.4597" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="s-time">09:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 出發旭岳</div>
+          <div class="s-desc">中富良野 &#8594; 旭岳溫泉 約50分，雪道慢行</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">停車&#165;500</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.4640,142.4597/43.6647,142.8533" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">09:45</div>
+        <div class="s-body">
+          <div class="s-place">旭岳ビジターセンター</div>
+          <div class="s-desc">確認當日雪況，可租借スノーシュー雪鞋體驗</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">雪鞋&#165;2,000</span><a class="map-btn" href="https://maps.google.com/?q=43.6650,142.8520" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">10:00</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 大雪山旭岳纜車</div>
+          <div class="s-desc">冬季 09:00&#8211;15:40（上行末班15:20），搭至標高1,600m 姿見駅，俯瞰壯闊雪山連峰。注意：極寒需全副武裝（&#8722;15&#8451;以下）</div>
+          <div class="s-meta"><span class="cost-tag">&#165;2,800/人往返</span><a class="map-btn" href="https://maps.google.com/?q=43.6647,142.8533" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">11:00</div>
+        <div class="s-body">
+          <div class="s-place">姿見の池 雪中散步</div>
+          <div class="s-desc">姿見駅周邊雪地漫步，粉雪包圍的夢幻絕景，停留45&#8211;60分</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.6730,142.8600" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">12:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127836; 東川町 午餐</div>
+          <div class="s-desc">返程在東川市街找小食堂，或道の駅ひがしかわ周邊</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">&#165;800&#8211;1,200/人</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.6647,142.8533/43.6960,142.8428" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">14:00</div>
+        <div class="s-body">
+          <div class="s-place">&#9749; 東川町文青街道</div>
+          <div class="s-desc">「攝影小鎮」文化藝廊、家具設計店、木質咖啡廳暖身</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;600/人</span><a class="map-btn" href="https://maps.google.com/?q=43.6960,142.8428" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">16:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 返回民宿</div>
+          <div class="s-desc">東川 &#8594; 中富良野 約30分，天黑前回家</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.6960,142.8428/43.4640,142.4597" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">18:00</div>
+        <div class="s-body">
+          <div class="s-place">&#127859; 民宿自炊</div>
+          <div class="s-desc">北海道牛奶鍋或奶油鮭魚義大利麵</div>
+          <div class="s-meta"><span class="cost-tag">食材含採買</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 4 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D4</div>
+      <div class="day-title-wrap">
+        <div class="day-title">美瑛丘陵 · 白金溫泉 · 青池夜點燈</div>
+        <div class="day-subtitle">12月14日（日）</div>
+      </div>
+      <span class="day-badge badge-biei">&#128309; 美瑛</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.5853,142.4665" target="_blank">美瑛丘陵</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.5372,142.5360" target="_blank">白鬚瀑布</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.5560,142.5250" target="_blank">白金溫泉</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.5224,142.5497" target="_blank">青池點燈</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.4640,142.4597/43.5853,142.4665/43.5560,142.5250/43.5224,142.5497/43.4640,142.4597" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">10:00</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 美瑛丘陵兜風</div>
+          <div class="s-desc">拼布之路（パッチワークの路），肯與梅麗之木、親子樹，雪覆丘陵如明信片</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.5853,142.4665" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">11:00</div>
+        <div class="s-body">
+          <div class="s-place">美瑛駅周邊</div>
+          <div class="s-desc">歐風石造車站＋冬季燈飾，四季の情報館取觀光地圖</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.5847,142.4672" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">11:30</div>
+        <div class="s-body">
+          <div class="s-place">&#129360; Ferme La Terre 美瑛</div>
+          <div class="s-desc">美瑛產小麥＋北海道乳製品複合餐廳，文青午餐</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">&#165;1,500&#8211;2,500/人</span><a class="map-btn" href="https://maps.google.com/?q=43.5750,142.4780" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">13:00</div>
+        <div class="s-body">
+          <div class="s-place">白鬚瀑布</div>
+          <div class="s-desc">往白金方向途中停車，潛流瀑布冬季壯觀，通年點燈</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.5372,142.5360" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">13:30</div>
+        <div class="s-body">
+          <div class="s-place">&#9832;&#65039; 白金溫泉 日歸湯</div>
+          <div class="s-desc">泡溫泉暖身（しろがね温泉），自備毛巾</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">&#165;800&#8211;1,200/人</span><a class="map-btn" href="https://maps.google.com/?q=43.5560,142.5250" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">15:30</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 返回民宿休息</div>
+          <div class="s-desc">養精蓄銳，等待夜晚青池點燈</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.5560,142.5250/43.4640,142.4597" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">17:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127859; 民宿晚餐</div>
+          <div class="s-desc">先吃簡單晚餐，今晚還有夜遊行程</div>
+          <div class="s-meta"><span class="cost-tag">食材含採買</span></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">19:00</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 白金青池夜間點燈</div>
+          <div class="s-desc">12月 16:30&#8211;21:00，冰封雪覆的青池配彩燈極夢幻。停車&#165;500，記得帶手電筒</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">停車&#165;500</span><a class="map-btn" href="https://maps.google.com/?q=43.5224,142.5497" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">20:30</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 返回民宿</div>
+          <div class="s-desc">青池 &#8594; 中富良野 約30分，雪道慢行</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.5224,142.5497/43.4640,142.4597" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 5 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D5</div>
+      <div class="day-title-wrap">
+        <div class="day-title">旭川市區 · 拉麵 · 男山酒造</div>
+        <div class="day-subtitle">12月15日（一）</div>
+      </div>
+      <span class="day-badge badge-asahikawa">&#127836; 旭川</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.7701,142.3650" target="_blank">旭川駅</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.7680,142.3640" target="_blank">拉麵</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.7780,142.3954" target="_blank">男山酒造</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.7710,142.3630" target="_blank">買物公園</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.4640,142.4597/43.7701,142.3650/43.7680,142.3640/43.7780,142.3954/43.7710,142.3630/43.4640,142.4597" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="s-time">09:30</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 中富良野 &#8594; 旭川</div>
+          <div class="s-desc">約40分車程，旭川駅周邊停車場</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">停車&#165;500&#8211;800</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.4640,142.4597/43.7701,142.3650" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">10:30</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 旭川駅 · 旭橋</div>
+          <div class="s-desc">現代感旭川駅，步行至常磐公園、旭橋，北方城市靜謐雪景</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.7701,142.3650" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">11:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127836; 旭川らぅめん青葉</div>
+          <div class="s-desc">Tabelog 高評醤油拉麵，豚骨&#215;魚介雙湯，旭川駅步行7分。※週三休</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;900&#8211;1,200/人</span><a class="map-btn" href="https://maps.google.com/?q=43.7680,142.3640" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">13:00</div>
+        <div class="s-body">
+          <div class="s-place">&#9749; Switchflavor</div>
+          <div class="s-desc">自家製プリン＋旭岳ブレンド，半包廂空間，旭川最文青的咖啡廳</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;1,000&#8211;1,300/人</span><a class="map-btn" href="https://maps.google.com/?q=43.7695,142.3645" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">14:00</div>
+        <div class="s-body">
+          <div class="s-place">&#127862; 男山酒造</div>
+          <div class="s-desc">江戶時代創業清酒蔵，資料館免費參觀，試飲&#165;200，帶瓶在地清酒</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">試飲&#165;200；酒&#165;1,500↑</span><a class="map-btn" href="https://maps.google.com/?q=43.7780,142.3954" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">15:00</div>
+        <div class="s-body">
+          <div class="s-place">平和通買物公園</div>
+          <div class="s-desc">步行商店街，き花洋菓子、蜂屋珈琲，伴手禮採購</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">依個人</span><a class="map-btn" href="https://maps.google.com/?q=43.7710,142.3630" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-supermarket">
+        <div class="s-time">16:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128722; フクハラ旭川 補充食材</div>
+          <div class="s-desc">最後一晚食材，旭川特產豚肉與江丹別青起司</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">&#165;2,000&#8211;3,000（共）</span><a class="map-btn" href="https://maps.google.com/?q=43.7650,142.3800" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">17:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128663; 返回民宿</div>
+          <div class="s-desc">旭川 &#8594; 中富良野，天黑前到家</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.7701,142.3650/43.4640,142.4597" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">18:30</div>
+        <div class="s-body">
+          <div class="s-place">&#129385; 民宿最後晚餐</div>
+          <div class="s-desc">男山清酒佐旭川豚肉煎烤，雪中小屋最後一夜</div>
+          <div class="s-meta"><span class="cost-tag">食材含採買</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 6 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D6</div>
+      <div class="day-title-wrap">
+        <div class="day-title">還車 · JR 返回札幌 · 成吉思汗</div>
+        <div class="day-subtitle">12月16日（二）</div>
+      </div>
+      <span class="day-badge badge-transit">&#128260; 移動日</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.3450,142.3834" target="_blank">富良野</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.7701,142.3650" target="_blank">還車</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://www.google.com/maps/search/?api=1&query=43.06420135498047%2C141.32989501953125" target="_blank">Airbnb</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.4640,142.4597/43.3450,142.3834/43.7701,142.3650/43.0645,141.3298" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="s-time">09:30</div>
+        <div class="s-body">
+          <div class="s-place">フラノマルシェ</div>
+          <div class="s-desc">富良野物産中心，買甜點咖啡，JR富良野站步行7分</div>
+          <div class="s-meta"><span class="transport-tag t-car">自駕</span><span class="cost-tag">&#165;500/人</span><a class="map-btn" href="https://maps.google.com/?q=43.3450,142.3834" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">12:00</div>
+        <div class="s-body">
+          <div class="s-place">&#127831; 新子焼き 旭川</div>
+          <div class="s-desc">旭川 B 級美食，雞翅醬燒，在地人最愛</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;800&#8211;1,200/人</span><a class="map-btn" href="https://maps.google.com/?q=43.7700,142.3640" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">13:30</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 還車</div>
+          <div class="s-desc">旭川租車公司還車（13:30），確認車況、補滿油</div>
+          <div class="s-meta"><a class="map-btn" href="https://maps.google.com/?q=43.7720,142.3650" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">14:30</div>
+        <div class="s-body">
+          <div class="s-place">&#128649; 旭川 &#8594; 札幌 JR</div>
+          <div class="s-desc">JR 特急ライラック / カムイ（約1.5小時，指定席）</div>
+          <div class="s-meta"><span class="transport-tag t-jr">JR 特急</span><span class="cost-tag">&#165;4,180/人</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.7701,142.3650/43.0686,141.3507" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">16:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127968; Airbnb Check-in</div>
+          <div class="s-desc">中央区北5条西17丁目 アジュールコートN5，地下鐵西18丁目站附近</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=43.06420135498047%2C141.32989501953125" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">18:00</div>
+        <div class="s-body">
+          <div class="s-place">&#127830; 成吉思汗烤羊</div>
+          <div class="s-desc">サッポロビール園，北海道烤羊肉，三人共享</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">&#165;2,500&#8211;3,500/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0692,141.3618" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 7 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D7</div>
+      <div class="day-title-wrap">
+        <div class="day-title">圓山 · 北海道神宮 · 藻岩山夜景</div>
+        <div class="day-subtitle">12月17日（三）</div>
+      </div>
+      <span class="day-badge badge-sapporo">&#127961; 札幌</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0534,141.3173" target="_blank">圓山公園</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0526,141.3204" target="_blank">北海道神宮</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0483,141.3548" target="_blank">中島公園</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0197,141.3249" target="_blank">藻岩山</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.0534,141.3173/43.0526,141.3204/43.0483,141.3548/43.0197,141.3249" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="s-time">09:00</div>
+        <div class="s-body">
+          <div class="s-place">&#9749; 圓山周邊咖啡廳</div>
+          <div class="s-desc">地鐵圓山公園站，質感早午餐咖啡廳</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">&#165;800&#8211;1,200/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0534,141.3173" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">10:30</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 北海道神宮</div>
+          <div class="s-desc">積雪神宮境內莊嚴美麗，六花亭社内店（限定甜點），免費參拜</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行14分</span><span class="cost-tag">免費＋六花亭&#165;200</span><a class="map-btn" href="https://maps.google.com/?q=43.0526,141.3204" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">12:00</div>
+        <div class="s-body">
+          <div class="s-place">圓山公園散步</div>
+          <div class="s-desc">雪覆都市公園，靜謐感受北海道冬日日常</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.0534,141.3173" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">13:00</div>
+        <div class="s-body">
+          <div class="s-place">&#129409; 根室花丸壽司</div>
+          <div class="s-desc">人氣回轉壽司，道地北海道海鮮，接近旅程尾聲好好吃一頓</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">&#165;2,000&#8211;3,000/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0686,141.3521" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">15:00</div>
+        <div class="s-body">
+          <div class="s-place">中島公園</div>
+          <div class="s-desc">豐平館、池塘、冬日雪景，日本都市公園百選，散步放鬆</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.0483,141.3548" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">18:30</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 藻岩山夜景</div>
+          <div class="s-desc">日本三大夜景之一，纜車＋迷你纜車至山頂，眺望札幌市區閃爍燈海</div>
+          <div class="s-meta"><span class="transport-tag t-bus">巴士+纜車</span><span class="cost-tag">&#165;1,700/人往返</span><a class="map-btn" href="https://maps.google.com/?q=43.0197,141.3249" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">20:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127866; 薄野居酒屋</div>
+          <div class="s-desc">北海道烤海鮮、鮭魚、牡蠣，倒數第二夜乾杯</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">&#165;2,000&#8211;2,500/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0535,141.3559" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 8 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D8</div>
+      <div class="day-title-wrap">
+        <div class="day-title">白色戀人公園 · 大通 · 最後採買</div>
+        <div class="day-subtitle">12月18日（四）</div>
+      </div>
+      <span class="day-badge badge-sapporo">&#127961; 札幌</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0818,141.2960" target="_blank">白色戀人公園</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0594,141.3522" target="_blank">大通公園</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0560,141.3520" target="_blank">狸小路</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.0818,141.2960/43.0594,141.3522/43.0560,141.3520/43.0686,141.3521" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">10:30</div>
+        <div class="s-body">
+          <div class="s-place">&#11088; 白色戀人公園</div>
+          <div class="s-desc">英式都鐸建築，工廠製程參觀＋限定甜點，冬季燈飾。地鐵宮の沢站步行7分</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">入館&#165;800/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0818,141.2960" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">12:30</div>
+        <div class="s-body">
+          <div class="s-place">大通公園 最後散步</div>
+          <div class="s-desc">最後一次漫步大通公園，白色燈飾前合照留念</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">免費</span><a class="map-btn" href="https://maps.google.com/?q=43.0594,141.3522" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">13:00</div>
+        <div class="s-body">
+          <div class="s-place">&#127836; 午餐 味噌拉麵</div>
+          <div class="s-desc">大通周邊，札幌味噌拉麵最後一碗</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;1,000&#8211;1,500/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0600,141.3530" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-supermarket">
+        <div class="s-time">15:00</div>
+        <div class="s-body">
+          <div class="s-place">&#128722; AEON 最後採買</div>
+          <div class="s-desc">帶回台灣：北海道奶油、起司、じゃがポックル、六花亭、白色戀人</div>
+          <div class="s-meta"><span class="transport-tag t-subway">地鐵</span><span class="cost-tag">&#165;3,000&#8211;5,000/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0600,141.3530" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-meal">
+        <div class="s-time">18:30</div>
+        <div class="s-body">
+          <div class="s-place">&#127843; 最終晚餐 壽司</div>
+          <div class="s-desc">根室花丸或 Sushi Minato，道別北海道的海鮮滋味</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;3,000&#8211;5,000/人</span><a class="map-btn" href="https://maps.google.com/?q=43.0686,141.3521" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 9 ===== -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-num">D9</div>
+      <div class="day-title-wrap">
+        <div class="day-title">機場 · 回家</div>
+        <div class="day-subtitle">12月19日（五）</div>
+      </div>
+      <span class="day-badge badge-transit">&#9992;&#65039; 回程</span>
+    </div>
+    <div class="route-bar">
+      <span class="route-bar-label">&#128205;</span>
+      <a class="route-stop" href="https://www.google.com/maps/search/?api=1&query=43.06420135498047%2C141.32989501953125" target="_blank">Airbnb</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0686,141.3507" target="_blank">札幌站</a>
+      <span class="route-arrow">&#8594;</span>
+      <a class="route-stop" href="https://maps.google.com/?q=43.0742,141.6922" target="_blank">新千歲機場</a>
+      <a class="route-full-btn" href="https://www.google.com/maps/dir/43.0645,141.3298/43.0686,141.3507/43.0742,141.6922" target="_blank">&#128506; 完整路線</a>
+    </div>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="s-time">09:00</div>
+        <div class="s-body">
+          <div class="s-place">Airbnb 退房</div>
+          <div class="s-desc">整理行李退房</div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">09:30</div>
+        <div class="s-body">
+          <div class="s-place">&#9749; 最後一杯咖啡</div>
+          <div class="s-desc">附近咖啡廳，最後一杯北海道牛奶咖啡</div>
+          <div class="s-meta"><span class="transport-tag t-walk">步行</span><span class="cost-tag">&#165;500/人</span></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">10:30</div>
+        <div class="s-body">
+          <div class="s-place">&#128649; 札幌 &#8594; 新千歲機場</div>
+          <div class="s-desc">JR 快速エアポート（約37分），班機14:40，最晚12:00前到機場</div>
+          <div class="s-meta"><span class="transport-tag t-jr">JR</span><span class="cost-tag">&#165;1,230/人</span><a class="map-btn map-btn-route" href="https://www.google.com/maps/dir/43.0686,141.3507/43.0742,141.6922" target="_blank">&#128506; 路線</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="s-time">11:15</div>
+        <div class="s-body">
+          <div class="s-place">新千歲機場 免稅區</div>
+          <div class="s-desc">最後補購：北菓楼、六花亭、白色戀人、ROYCE'，全在航廈內</div>
+          <div class="s-meta"><a class="map-btn" href="https://maps.google.com/?q=43.0742,141.6922" target="_blank">&#128205; 地圖</a></div>
+        </div>
+      </div>
+
+      <div class="schedule-item row-highlight">
+        <div class="s-time">14:40</div>
+        <div class="s-body">
+          <div class="s-place">&#9992;&#65039; CI131 起飛</div>
+          <div class="s-desc">新千歲 &#8594; 台北桃園，18:15 抵達，旅程圓滿結束 &#10052;&#65039;</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- end daily section -->
+
+<!-- BUDGET -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">&#128176;</span><span class="section-title">費用概估（每人，3人平攤）</span></div>
+  <div class="callout"><strong>&#128161;</strong> 以下為每人日幣概估，2025/12 匯率約 1 JPY &#8776; 0.21 TWD</div>
+  <div class="budget-list">
+    <div class="budget-row"><span class="budget-label">&#128663; 租車（4天，3人分攤）</span><span class="budget-amount">&#165;10,000&#8211;14,000</span></div>
+    <div class="budget-row"><span class="budget-label">&#128646; JR / 地鐵交通</span><span class="budget-amount">&#165;8,000&#8211;10,000</span></div>
+    <div class="budget-row"><span class="budget-label">&#127836; 餐食（9天）</span><span class="budget-amount">&#165;25,000&#8211;35,000</span></div>
+    <div class="budget-row"><span class="budget-label">&#127915; 景點門票</span><span class="budget-amount">&#165;8,000&#8211;10,000</span></div>
+    <div class="budget-row"><span class="budget-label">&#128722; 超市食材＋伴手禮</span><span class="budget-amount">&#165;8,000&#8211;12,000</span></div>
+    <div class="budget-row"><span class="budget-label">&#9749; 咖啡廳（約7次）</span><span class="budget-amount">&#165;5,000&#8211;7,000</span></div>
+    <div class="budget-row"><span class="budget-label">&#128230; 合計（不含機票住宿）</span><span class="budget-amount">&#165;65,000&#8211;90,000</span></div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div class="section">
+  <div class="section-header"><span class="section-icon">&#128161;</span><span class="section-title">實用提醒</span></div>
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-title">&#129399; 12月穿衣建議</div><div class="tip-body"><ul><li>旭川最低達 &#8722;20&#8451;，勿輕忽</li><li>毛帽、圍巾、防風手套必備</li><li>防水止滑靴（雪道必要）</li><li>旭岳山頂建議穿滑雪外套</li></ul></div></div>
+    <div class="tip-card"><div class="tip-title">&#128663; 租車注意</div><div class="tip-body"><ul><li>務必選 AWD/4WD，冬胎已安裝</li><li>攜帶國際駕照（台灣版）</li><li>ETC 卡省去高速費繳費麻煩</li><li>SIM 卡在台灣先購買</li></ul></div></div>
+    <div class="tip-card"><div class="tip-title">&#128722; 超市採買地點</div><div class="tip-body"><ul><li>中富良野：フクハラ（24H）</li><li>旭川：フクハラ、コープ</li><li>札幌：AEON、コープさっぽろ</li><li>確認民宿廚具設備</li></ul></div></div>
+    <div class="tip-card"><div class="tip-title">&#127869; 旭岳纜車</div><div class="tip-body"><ul><li>冬季 09:00&#8211;15:40（末班15:20）</li><li>大人往返 &#165;2,800</li><li>惡天候可能停駛，出發前確認官網</li></ul></div></div>
+    <div class="tip-card"><div class="tip-title">&#128309; 白金青池點燈</div><div class="tip-body"><ul><li>12月：16:30&#8211;21:00</li><li>停車 &#165;500，帶手電筒</li><li>白鬚瀑布通年點燈可順遊</li></ul></div></div>
+    <div class="tip-card"><div class="tip-title">&#127836; 在地必吃清單</div><div class="tip-body"><ul><li>旭川醤油拉麵（豚骨&#215;魚介）</li><li>新子焼き（旭川雞翅炭烤）</li><li>湯咖哩（Suage+，札幌）</li><li>海鮮丼（二条市場）</li><li>成吉思汗烤羊肉</li></ul></div></div>
+  </div>
+</div>
+
+<hr class="divider">
+<div style="text-align:center;color:var(--text-muted);font-size:12px;padding:16px 0;">&#10052;&#65039; 良い旅を。祝一路順風，玩得開心！&#10052;&#65039;</div>
+
+</div>
+</body>
+</html>
